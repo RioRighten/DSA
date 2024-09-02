@@ -1,6 +1,6 @@
 Let stk be an array with size 10
 
-#Push operation
+# Push operation
 
 1. Set Initial top=-1
 2. Input: The value to be pushed (value).
@@ -11,7 +11,7 @@ Let stk be an array with size 10
     (b)Set stack[top] = value.
     (c)Print "Pushed value onto the stack".
 
-#Pop operation
+# Pop operation
 
 1. Check if the stack is empty:
     (a)If top == -1, print "Stack Underflow" and return -1.
@@ -20,7 +20,7 @@ Let stk be an array with size 10
     (b)Decrement top by 1.
     (c)Return the popped value.
 
-#Display operation
+# Display operation
 
 1. Check if the stack is empty:
     (a)If top == -1, print "The stack is empty."
