@@ -1,3 +1,5 @@
+Example: Consider the array arr[]={10,50,30,70,80,20,90,40} and key=30
+
 # Step 1:
 1. Start from the first element (index 0) and compare key with each element (arr[i]).
 2. Comparing key with first element arr[0]. Since not equal, the iterator moves to the next element as a potential match.
