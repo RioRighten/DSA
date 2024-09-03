@@ -12,6 +12,41 @@ void push(int value);
 int pop();
 void display();
 
+// Function to push an element onto the stack
+void push(int value) {
+    if (top == MAX - 1) {
+        printf("Stack Overflow! Cannot push %d\n", value);
+    } else {
+        top++;
+        stack[top] = value;
+        printf("Pushed %d onto the stack.\n", value);
+    }
+}
+
+// Function to pop an element from the stack
+int pop() {
+    if (top == -1) {
+        printf("Stack Underflow! Cannot pop.\n");
+        return -1;
+    } else {
+        int value = stack[top];
+        top--;
+        return value;
+    }
+}
+
+// Function to display the elements of the stack
+void display() {
+    if (top == -1) {
+        printf("The stack is empty.\n");
+    } else {
+        printf("Stack elements:\n");
+        for (int i = top; i >= 0; i--) {
+            printf("%d\n", stack[i]);
+        }
+    }
+}
+
 int main() {
     int choice, value;
 
@@ -47,39 +82,4 @@ int main() {
     }
 
     return 0;
-}
-
-// Function to push an element onto the stack
-void push(int value) {
-    if (top == MAX - 1) {
-        printf("Stack Overflow! Cannot push %d\n", value);
-    } else {
-        top++;
-        stack[top] = value;
-        printf("Pushed %d onto the stack.\n", value);
-    }
-}
-
-// Function to pop an element from the stack
-int pop() {
-    if (top == -1) {
-        printf("Stack Underflow! Cannot pop.\n");
-        return -1;
-    } else {
-        int value = stack[top];
-        top--;
-        return value;
-    }
-}
-
-// Function to display the elements of the stack
-void display() {
-    if (top == -1) {
-        printf("The stack is empty.\n");
-    } else {
-        printf("Stack elements:\n");
-        for (int i = top; i >= 0; i--) {
-            printf("%d\n", stack[i]);
-        }
-    }
 }
